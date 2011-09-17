@@ -65,7 +65,7 @@ class Currencies extends Panel
     Currency.fetch()
 
   rate: ->
-    (@from.rate * (1 / @to.rate)).toFixed(4)
+    @from.rate * (1 / @to.rate)
   
   render: =>
     # Calculate currency conversion
@@ -123,7 +123,11 @@ class Currencies extends Panel
 
   helper:
     format: (num, addPoint) ->
-      num = num.toString().replace(/\B(?=(?:\d{3})+(?!\d))/g, ",")
-      num + (addPoint and '.' or '')
+      re = /(\d+)(\d{3,3})/
+      [num, decimals] = ('' + num).split('.')
+      num = num.replace(re, '$1,$2') while re.test(num)
+      num += ".#{decimals}" if decimals
+      num += "." if addPoint
+      num
     
 module.exports = Currencies
