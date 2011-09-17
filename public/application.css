@@ -27,7 +27,7 @@ h1,h2{margin:0;padding:0;font-size:1em}
 .list{font-size:1.5em;}
 .list header{position:relative;background:#fff;border-bottom:.1em solid #ddd;overflow:hidden;}
 .list header h2{text-align:center;font-size:1.3em;font-family:"Helvetica Neue",sans-serif;margin:10px 0}
-.list header button{margin:.6em;font-size:1em;position:absolute;left:0;top:0}
+.list header button{-webkit-box-shadow:inset 0 -1px 3px rgba(0,0,0,0.30),inset 0 1px 3px 0 rgba(0,0,0,0.40);margin:.6em;font-size:1em;position:absolute;left:0;top:0}
 .list .content{background:#f0f0f0;}
 .list .content:empty:after{content:"Loading...";display:block;text-align:center;margin:3em 0}
 .list .content .item{padding:.7em .5em;border-bottom:.1em solid #ddd;cursor:pointer;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;-webkit-box-pack:start;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;-moz-box-pack:start;}

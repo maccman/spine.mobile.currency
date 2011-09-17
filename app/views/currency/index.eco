@@ -3,7 +3,7 @@
 </section>
 
 <section class="input">
-  <h1><%= @helper.format(@input, @addPeriod) %></h1>
+  <h1><%= @helper.format(@input, @addPoint) %></h1>
   <h2><em><%= @from.symbol %></em> <%= @from.name %></h2>
 </section>
 
@@ -24,7 +24,7 @@
   <div data-num="4">4</div>
   <div data-num="5">5</div>
   <div data-num="6">6</div>
-  <div class="period">.</div>
+  <div class="point">.</div>
   <div data-num="7">7</div>
   <div data-num="8">8</div>
   <div data-num="9">9</div>

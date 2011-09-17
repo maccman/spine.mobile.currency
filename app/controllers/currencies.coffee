@@ -1,5 +1,5 @@
-Spine   = require('spine')
-{Panel} = require('spine.mobile')
+Spine    = require('spine')
+{Panel}  = require('spine.mobile')
 Currency = require('models/currency')
 
 class CurrenciesList extends Panel
@@ -14,10 +14,8 @@ class CurrenciesList extends Panel
   constructor: (@controller, @callback) ->
     super()
     @addButton('Back', @back)
-    
     Currency.bind('refresh change', @render)
     @render()
-    
     @active(trans: 'right')
     
   render: =>
@@ -31,10 +29,7 @@ class CurrenciesList extends Panel
     
   back: ->
     @controller.active(trans: 'left')
-    
-  activate: ->
-    super
-  
+
   # Cleanup panel once it's deactivated
   deactivate: ->
     super
@@ -52,7 +47,7 @@ class Currencies extends Panel
   events:
     'tap .pad div': 'enter'
     'tap .pad .clear': 'clear'
-    'tap .pad .period': 'period'
+    'tap .pad .point': 'point'
     'tap .input': 'changeFrom'
     'tap .output': 'changeTo'
     'tap .flip': 'flip'
@@ -62,11 +57,11 @@ class Currencies extends Panel
     @from = @to = Currency.default()
     
     # Cancel scrolling on main view
-    @el.bind 'touchstart', (e) -> e.preventDefault()
+    @el.bind 'touchstart', (e) -> 
+      e.preventDefault()
     
     @clear()
     @active()
-    
     Currency.fetch()
 
   rate: ->
@@ -86,9 +81,9 @@ class Currencies extends Panel
     # Convert to string
     num += ''
     
-    # Prefix with decimel
-    if @addPeriod
-      @addPeriod = false
+    # Prefix with decimal
+    if @addPoint
+      @addPoint = false
       num = ".#{num}"
     
     # Simple way of combining numbers
@@ -102,14 +97,14 @@ class Currencies extends Panel
   clear: ->
     @input     = 0.0
     @output    = 0.0
-    @addPeriod = false
+    @addPoint = false
     @render()
     
-  period: ->
-    # Return if already has period
+  point: ->
+    # Return if already has point
     return if @input % 1 isnt 0
     
-    @addPeriod = true
+    @addPoint = true
     @render()
     
   changeFrom: ->
@@ -127,8 +122,8 @@ class Currencies extends Panel
     @render()
 
   helper:
-    format: (num, addPeriod) ->
+    format: (num, addPoint) ->
       num = num.toString().replace(/\B(?=(?:\d{3})+(?!\d))/g, ",")
-      num + (addPeriod and '.' or '')
+      num + (addPoint and '.' or '')
     
 module.exports = Currencies

@@ -12,9 +12,5 @@ class App extends Stage.Global
     
     $('body').bind 'click', (e) -> 
       e.preventDefault()
-      
-    $('body').bind 'shake', ->
-      if confirm('Reload?')
-        window.location.reload()
 
 module.exports = App

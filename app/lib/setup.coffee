@@ -11,5 +11,3 @@ require('spine/lib/route')
 require('spine/lib/tmpl')
 
 require('spine.mobile')
-
-require('lib/shake')
