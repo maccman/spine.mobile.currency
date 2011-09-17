@@ -65,7 +65,7 @@ class Currencies extends Panel
     Currency.fetch()
 
   rate: ->
-    @from.rate * (1 / @to.rate)
+    (@from.rate * (1 / @to.rate)).toFixed(4)
   
   render: =>
     # Calculate currency conversion
