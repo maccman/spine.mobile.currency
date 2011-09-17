@@ -55,6 +55,7 @@ class Currencies extends Panel
     'tap .pad .period': 'period'
     'tap .input': 'changeFrom'
     'tap .output': 'changeTo'
+    'tap .flip': 'flip'
     
   constructor: ->
     super
@@ -120,6 +121,10 @@ class Currencies extends Panel
     new CurrenciesList @, (res) => 
       @to = res
       @render()
+      
+  flip: ->
+    [@to, @from] = [@from, @to]
+    @render()
 
   helper:
     format: (num, addPeriod) ->

@@ -7,7 +7,7 @@ body.stage > .content{position:absolute;left:0;right:0;top:0;bottom:0}
 .panel{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;}
 .panel > .content{-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;overflow:auto;-webkit-overflow-scrolling:touch}
 body{color:#555;font-weight:bold;font-size:.67em;font-family:"Helvetica Neue",sans-serif;-webkit-user-select:none}
-button{padding:0;background:#fff;border:transparent;color:inherit;font-size:.9em;font-family:"Helvetica Neue",sans-serif}
+button{padding:.3em .5em;background:#999;color:#fff;font-size:.7em;font-weight:normal;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;font-family:"Helvetica Neue",sans-serif;border:0}
 em{font-style:normal}
 h1,h2{margin:0;padding:0;font-size:1em}
 *{-webkit-tap-highlight-color:rgba(0,0,0,0.00)}
@@ -18,6 +18,8 @@ h1,h2{margin:0;padding:0;font-size:1em}
 .input h1,.output h1{padding:0 0 .1em;font-size:4.7em;letter-spacing:.02em}
 .input h2,.output h2{padding:0 .2em 0;color:#999;font-size:1.1em;line-height:.5;}
 .input h2 em,.output h2 em{left:-.3em;color:#ccc}
+.flip{position:absolute;top:auto;z-index:1;padding:1.5em 1.3em;margin:-2.3em 0 0 0;}
+.flip button{text-transform:uppercase;letter-spacing:.1em}
 .pad{background:#f2f2f2;-moz-box-shadow:inset 0 2px 8px rgba(0,0,0,0.15);-webkit-box-shadow:inset 0 2px 8px rgba(0,0,0,0.15);-moz-box-shadow:inset 0 2px 8px rgba(0,0,0,0.15);-webkit-box-shadow:inset 0 2px 8px rgba(0,0,0,0.15);box-shadow:inset 0 2px 8px rgba(0,0,0,0.15);overflow:hidden;}
 .pad div{float:left;width:25%;padding:.7em 0;margin:1.2% 0%;font-size:2.7em;text-align:center;cursor:pointer;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;}
 .pad div:active{background:rgba(0,0,0,0.05)}

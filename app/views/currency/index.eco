@@ -7,6 +7,10 @@
   <h2><em><%= @from.symbol %></em> <%= @from.name %></h2>
 </section>
 
+<section class="flip">
+  <button>Flip</button>
+</section>
+
 <section class="output">
   <h1><%= @helper.format(@output) %></h1>
   <h2><em><%= @to.symbol %></em> <%= @to.name %></h2>
