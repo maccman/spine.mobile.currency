@@ -20,5 +20,11 @@ class App extends Stage.Global
     # Disable click events
     $('body').bind 'click', (e) -> 
       e.preventDefault()
+    
+    $('body').bind 'orientationchange', (e) ->
+      orientation = if Math.abs(window.orientation) is 90 then 'landscape' else 'portrait'
+      $('body').removeClass('portrait landscape')
+               .addClass(orientation)
+               .trigger('turn', orientation: orientation)
 
 module.exports = App

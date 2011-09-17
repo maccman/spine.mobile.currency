@@ -11,6 +11,7 @@ button{padding:.3em .5em;background:#999;color:#fff;font-size:.7em;font-weight:n
 em{font-style:normal}
 h1,h2{margin:0;padding:0;font-size:1em}
 *{-webkit-tap-highlight-color:rgba(0,0,0,0.00)}
+body.landscape::after{content:"Portrait only mode supported";font-size:16px;position:absolute;left:0;right:0;top:0;bottom:0;text-align:center;padding:15%;background:rgba(255,255,255,0.90)}
 .currencies .content .status{margin:.5em 0;font-size:1.8em;text-align:center;}
 .currencies .content .status em{position:relative;top:-2px;color:#aaa;display:inline-block;font-size:.9em}
 .currencies .content .input,.currencies .content .output{position:relative;padding:.4em .5em 1em 0;border-top:1px solid #f3f3f3;cursor:pointer;text-align:right;background:transparent none 2% 47% no-repeat;}
