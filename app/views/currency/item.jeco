@@ -1,0 +1,5 @@
+<div class="item">
+  <span><%= @name %></span>
+  <em><%= @symbol %></em>
+  <em>(<%= @code %>)</em>
+</div>

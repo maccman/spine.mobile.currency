@@ -1,0 +1,28 @@
+<section class="status">
+  <span><%= @from.code %> <em>→</em> <%= @to.code %></span>
+</section>
+
+<section class="input">
+  <h1><%= @helper.format(@input, @addPeriod) %></h1>
+  <h2><em><%= @from.symbol %></em> <%= @from.name %></h2>
+</section>
+
+<section class="output">
+  <h1><%= @helper.format(@output) %></h1>
+  <h2><em><%= @to.symbol %></em> <%= @to.name %></h2>
+</section>
+
+<article class="pad">
+  <div data-num="1">1</div>
+  <div data-num="2">2</div>
+  <div data-num="3">3</div>
+  <div data-num="0">0</div>
+  <div data-num="4">4</div>
+  <div data-num="5">5</div>
+  <div data-num="6">6</div>
+  <div class="period">.</div>
+  <div data-num="7">7</div>
+  <div data-num="8">8</div>
+  <div data-num="9">9</div>
+  <div class="clear">Clear</div>
+</article>
