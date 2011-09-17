@@ -56,16 +56,17 @@ class Currencies extends Panel
     super
     @el.bind 'touchmove', (e) -> e.preventDefault()
     @from = @to = Currency.default()
+    @setRate()
     @clear()
     @active()
     Currency.fetch()
 
-  rate: ->
-    @from.rate * (1 / @to.rate)
+  setRate: ->
+    @rate = (@from.rate * (1 / @to.rate)).toFixed(4)
   
   render: =>
     # Calculate currency conversion
-    @output = @input and (@input * @rate()).toFixed(2) or 0
+    @output = @input and (@input * @rate).toFixed(2) or 0
     @html require('views/currency')(@)
     
   enter: (e) ->
@@ -99,22 +100,24 @@ class Currencies extends Panel
   point: ->
     # Return if already has point
     return if @input % 1 isnt 0
-    
     @addPoint = true
     @render()
     
   changeFrom: ->
     new CurrenciesList @, (res) => 
       @from = res
+      @setRate()
       @render()
     
   changeTo: ->
     new CurrenciesList @, (res) => 
       @to = res
+      @setRate()
       @render()
       
   flip: ->
     [@to, @from] = [@from, @to]
+    @setRate()
     @render()
 
   helper:
