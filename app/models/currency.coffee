@@ -8,12 +8,13 @@ class Currency extends Spine.Model
     new @(name: 'United States Dollar', code: 'USD', symbol: '$', rate: 1)
   
   @endpoint: 'http://currency-proxy.herokuapp.com/currencies'
+
   @fetch ->
     $.getJSON(@endpoint, (res) => @refresh(res, clear: true))
     
-  validate: ->
+  load: ->
+    super
     # USD Rate is always 1
-    rec.rate = 1 if rec.code is 'USD'
-    false
+    @rate = 1 if @code is 'USD'
 
 module.exports = Currency
