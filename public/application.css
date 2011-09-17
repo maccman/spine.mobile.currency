@@ -7,7 +7,8 @@ body.stage > .content{position:absolute;left:0;right:0;top:0;bottom:0}
 .panel{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;}
 .panel > .content{-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;overflow:auto;-webkit-overflow-scrolling:touch}
 body{color:#555;font-weight:bold;font-size:.67em;font-family:"Helvetica Neue",sans-serif;-webkit-user-select:none}
-button{padding:.3em .5em;background:#999;color:#fff;font-size:.7em;font-weight:normal;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;font-family:"Helvetica Neue",sans-serif;border:0}
+button{padding:.3em .5em;background:#999;color:#fff;font-size:.7em;font-weight:normal;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;font-family:"Helvetica Neue",sans-serif;border:0;}
+button:active{background:#a3a3a3}
 em{font-style:normal}
 h1,h2{margin:0;padding:0;font-size:1em}
 *{-webkit-tap-highlight-color:rgba(0,0,0,0.00)}
