@@ -55,11 +55,6 @@ class Currencies extends Panel
   constructor: ->
     super
     @from = @to = Currency.default()
-    
-    # Cancel scrolling on main view
-    @el.bind 'touchstart', (e) -> 
-      e.preventDefault()
-    
     @clear()
     @active()
     Currency.fetch()
@@ -123,11 +118,7 @@ class Currencies extends Panel
 
   helper:
     format: (num, addPoint) ->
-      re = /(\d+)(\d{3,3})/
-      [num, decimals] = ('' + num).split('.')
-      num = num.replace(re, '$1,$2') while re.test(num)
-      num += ".#{decimals}" if decimals
-      num += "." if addPoint
-      num
+      num = num.toString().replace(/\B(?=(?:\d{3})+(?!\d))/g, ",")
+      num + (addPoint and '.' or '')
     
 module.exports = Currencies
