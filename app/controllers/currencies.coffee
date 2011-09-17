@@ -39,15 +39,15 @@ class CurrenciesList extends Panel
 class Currencies extends Panel
   className:
     'currencies'
-  
+    
   elements:
-    '.input':  'inputEl'
-    '.output': 'outputEl'
+    '.input h1': 'inputEl'
+    '.output h1': 'outputEl'
     
   events:
-    'touchend .pad div': 'enter'
-    'tap .pad .clear': 'clear'
-    'tap .pad .point': 'point'
+    'touchstart .pad div': 'enter'
+    'touchstart .pad .clear': 'clear'
+    'touchstart .pad .point': 'point'
     'tap .input': 'changeFrom'
     'tap .output': 'changeTo'
     'tap .flip': 'flip'
@@ -56,8 +56,9 @@ class Currencies extends Panel
     super
     @el.bind 'touchmove', (e) -> e.preventDefault()
     @from = @to = Currency.default()
-    @setRate()
     @clear()
+    @setRate()
+    
     @active()
     Currency.fetch()
 
@@ -73,8 +74,10 @@ class Currencies extends Panel
     num = $(e.currentTarget).data('num')
     return unless num?
     
-    return if @hasOverflow()
-    
+    # Stop overflows
+    return if (@input + '').length  > 8 
+    return if (@output + '').length > 8
+
     # Convert to string
     num += ''
     
@@ -86,10 +89,6 @@ class Currencies extends Panel
     # Simple way of combining numbers
     @input = parseFloat(@input + num)
     @render()
-    
-  hasOverflow: ->
-    (@input + '').length > 10 or
-      (@output + '').length > 8
     
   clear: ->
     @input     = 0.0
