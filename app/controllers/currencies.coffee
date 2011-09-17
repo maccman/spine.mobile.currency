@@ -45,7 +45,7 @@ class Currencies extends Panel
     '.output': 'outputEl'
     
   events:
-    'tap .pad div': 'enter'
+    'touchend .pad div': 'enter'
     'tap .pad .clear': 'clear'
     'tap .pad .point': 'point'
     'tap .input': 'changeFrom'
@@ -54,6 +54,7 @@ class Currencies extends Panel
     
   constructor: ->
     super
+    @el.bind 'touchmove', (e) -> e.preventDefault()
     @from = @to = Currency.default()
     @clear()
     @active()
@@ -68,7 +69,7 @@ class Currencies extends Panel
     @html require('views/currency')(@)
     
   enter: (e) ->
-    num = $(e.target).data('num')
+    num = $(e.currentTarget).data('num')
     return unless num?
     
     return if @hasOverflow()
