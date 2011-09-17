@@ -1,0 +1,74 @@
+.currencies .content
+  .status
+    margin: 0.5em 0em
+    font-size: 1.8em
+    text-align: center
+  
+    em
+      position: relative
+      top: -2px
+      color: #AAA
+      display: inline-block
+      font-size: 0.9em
+  
+  .input, .output
+    position: relative
+    padding: 0.4em 0.5em 1em 0em
+    border-top: 1px solid #F3F3F3
+    cursor: pointer
+    text-align: right
+  
+    // For the bg images
+    background: transparent none 2% 47% no-repeat
+  
+    &:active
+      background-color: rgba(0, 255, 0, 0.4)
+  
+    h1
+      padding: 0em 0em 0.1em
+      font-size: 4.7em
+      letter-spacing: 0.02em
+    
+    h2
+      padding: 0em 0.2em 0em
+      color: #999
+      font-size: 1.1em
+      line-height: 0.5;
+    
+      em
+        left: -0.3em;
+        color: #ccc;
+      
+  .flip
+    position: absolute;
+    top: auto;
+    z-index: 1;
+    padding: 1.5em 1.3em;
+    margin: -2.3em 0em 0em 0em;
+
+    button
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    
+  .pad
+    background: #F2F2F2
+    inset-box-shadow(0, 2px, 8px, rgba(0, 0, 0, 0.15))
+    overflow: hidden
+  
+    div
+      float: left;
+      width: 25%
+      padding: 0.7em 0em
+      margin: 1.2% 0%
+      font-size: 2.7em
+      text-align: center
+      cursor: pointer
+      border-radius(5px)
+    
+      &:active
+        background: rgba(0, 0, 0, 0.05)
+        
+    .clear
+      padding-top: 2.45em;
+      font-size: 1.4em
+      background: none 50% 30% no-repeat;
