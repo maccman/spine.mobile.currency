@@ -12,29 +12,29 @@ em{font-style:normal}
 h1,h2{margin:0;padding:0;font-size:1em}
 *{-webkit-tap-highlight-color:rgba(0,0,0,0.00)}
 body.landscape::after{content:"Portrait only mode supported";font-size:16px;position:absolute;left:0;right:0;top:0;bottom:0;text-align:center;padding:15%;background:rgba(255,255,255,0.90)}
-.currencies .content .status{margin:.5em 0;font-size:1.8em;text-align:center;}
-.currencies .content .status em{position:relative;top:-2px;color:#aaa;display:inline-block;font-size:.9em}
-.currencies .content .input,.currencies .content .output{position:relative;padding:.4em .5em 1em 0;border-top:1px solid #f3f3f3;cursor:pointer;text-align:right;background:transparent none 2% 47% no-repeat;}
-.currencies .content .input:active,.currencies .content .output:active{background-color:rgba(0,255,0,0.40)}
-.currencies .content .input h1,.currencies .content .output h1{padding:0 0 .1em;font-size:4.7em;letter-spacing:.02em}
-.currencies .content .input h2,.currencies .content .output h2{padding:0 .2em 0;color:#999;font-size:1.1em;line-height:.5;}
-.currencies .content .input h2 em,.currencies .content .output h2 em{left:-.3em;color:#ccc}
-.currencies .content .flip{position:absolute;top:auto;z-index:1;padding:1.5em 1.3em;margin:-2.3em 0 0 0;}
-.currencies .content .flip button{text-transform:uppercase;letter-spacing:.1em}
-.currencies .content .pad{background:#f2f2f2;-moz-box-shadow:inset 0 2px 8px rgba(0,0,0,0.15);-webkit-box-shadow:inset 0 2px 8px rgba(0,0,0,0.15);-moz-box-shadow:inset 0 2px 8px rgba(0,0,0,0.15);-webkit-box-shadow:inset 0 2px 8px rgba(0,0,0,0.15);box-shadow:inset 0 2px 8px rgba(0,0,0,0.15);overflow:hidden;}
-.currencies .content .pad div{float:left;width:25%;padding:.7em 0;margin:1.2% 0%;font-size:2.7em;text-align:center;cursor:pointer;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;}
-.currencies .content .pad div:active{background:rgba(0,0,0,0.05)}
-.currencies .content .pad .clear{padding-top:2.45em;font-size:1.4em;background:none 50% 30% no-repeat}
+.currencies article .status{margin:.5em 0;font-size:1.8em;text-align:center;}
+.currencies article .status em{position:relative;top:-2px;color:#aaa;display:inline-block;font-size:.9em}
+.currencies article .input,.currencies article .output{position:relative;padding:.4em .5em 1em 0;border-top:1px solid #f3f3f3;cursor:pointer;text-align:right;background:transparent none 2% 47% no-repeat;}
+.currencies article .input:active,.currencies article .output:active{background-color:rgba(0,255,0,0.40)}
+.currencies article .input h1,.currencies article .output h1{padding:0 0 .1em;font-size:4.7em;letter-spacing:.02em}
+.currencies article .input h2,.currencies article .output h2{padding:0 .2em 0;color:#999;font-size:1.1em;line-height:.5;}
+.currencies article .input h2 em,.currencies article .output h2 em{left:-.3em;color:#ccc}
+.currencies article .flip{position:absolute;top:auto;z-index:1;padding:1.5em 1.3em;margin:-2.3em 0 0 0;}
+.currencies article .flip button{text-transform:uppercase;letter-spacing:.1em}
+.currencies article .pad{background:#f2f2f2;-moz-box-shadow:inset 0 2px 8px rgba(0,0,0,0.15);-webkit-box-shadow:inset 0 2px 8px rgba(0,0,0,0.15);-moz-box-shadow:inset 0 2px 8px rgba(0,0,0,0.15);-webkit-box-shadow:inset 0 2px 8px rgba(0,0,0,0.15);box-shadow:inset 0 2px 8px rgba(0,0,0,0.15);overflow:hidden;}
+.currencies article .pad div{float:left;width:25%;padding:.7em 0;margin:1.2% 0%;font-size:2.7em;text-align:center;cursor:pointer;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;}
+.currencies article .pad div:active{background:rgba(0,0,0,0.05)}
+.currencies article .pad .clear{padding-top:2.45em;font-size:1.4em;background:none 50% 30% no-repeat}
 .currenciesPicker{font-size:1.5em;}
 .currenciesPicker header{position:relative;background:#fff;border-bottom:.1em solid #ddd;overflow:hidden;}
 .currenciesPicker header h2{text-align:center;font-size:1.3em;font-family:"Helvetica Neue",sans-serif;margin:10px 0}
 .currenciesPicker header button{margin:.6em;font-size:1em;position:absolute;left:0;top:0}
-.currenciesPicker .content{background:#f0f0f0;}
-.currenciesPicker .content:empty:after{content:"Loading...";display:block;text-align:center;margin:3em 0}
-.currenciesPicker .content .item{padding:.7em .5em;border-bottom:.1em solid #ddd;cursor:pointer;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;-webkit-box-pack:start;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;-moz-box-pack:start;}
-.currenciesPicker .content .item:active{background-color:rgba(0,255,0,0.20)}
-.currenciesPicker .content .item span{display:block;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}
-.currenciesPicker .content .item em{margin:0 0 0 .7em;display:block;color:#bbb;display:block}
+.currenciesPicker article{background:#f0f0f0;}
+.currenciesPicker article:empty:after{content:"Loading...";display:block;text-align:center;margin:3em 0}
+.currenciesPicker article .item{padding:.7em .5em;border-bottom:.1em solid #ddd;cursor:pointer;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;-webkit-box-pack:start;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;-moz-box-pack:start;}
+.currenciesPicker article .item:active{background-color:rgba(0,255,0,0.20)}
+.currenciesPicker article .item span{display:block;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}
+.currenciesPicker article .item em{margin:0 0 0 .7em;display:block;color:#bbb;display:block}
 @media only screen and (-webkit-min-device-pixel-ratio:1){.currencies .content .input,.currencies .content .output{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAPCAYAAADd/14OAAAAaUlEQVQokWNgwAE6OzsDgDgDiDn+//+PU5EDEDdAcQZWhUAJAyRFIByAoRCbIpA4ikIsihJgcnCFWBSBPYGiECiggU8RssIKNIUC6B6EKcRrLeluJBQ0GAqJDkd8ivHFtQfBuEZSjJJ6ALPvvW9ej7+LAAAAAElFTkSuQmCC")}
 .currencies .content .pad .clear{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAA8UlEQVR42u3VP0tCURiA8ROEtLQ0OAhGQ01tfgWb+wB+BgchBA2EVNwcXB38HG3t4oWLGOlUewpOQRLy+gxeuBw44XmhK8QZfsvLgQcO548RkaMI4RAO4b8LR1HkUsYEb5gdaIEBCtrwHdYQhS3qmnAJKwhsS3xbs09srFnHN3yND0f0HbeopmYxiuhZa598wnnEEIf71NpHTHEFgxO8aMJneIb8YoxLGJziHGavhh/f8AWGkAPMk3hKA6LZ6gq+jhHO4QGS9VYnupCsD1eiD8nqOrnj+gek7Re243pNXRhoYYFXz09ihJvwH4dwCP+/8A7n95F+p5lWNAAAAABJRU5ErkJggg==")}
 }@media only screen and (-webkit-min-device-pixel-ratio:2){.currencies .content .input,.currencies .content .output{background-size:6px 8px;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAQAAACGG/bgAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAg5JREFUOMtjYMAK5AWzrKcn9hW0htbKM+ACzIzi7NbyRe5TsnpLW+NrTZYIPWHFqpCb2U+q1qEtraehq6G1tDZtif0TYSzKxFnsJOrsF2RMrG3v7uhoa25sWBH8VAKLQj++OuOuhAn13Y0dbe2dnY1dJRvdX4hgmiZaZ7QgZmJNe09HW3fjhIaG7CT/Dq07PJimGXXFTKgBm9Y+sX5BcbGvgoorzwlmTNNiJ9Z29Ha0djX1tLTl1fq5qzKw4DKtqbO1s7W3aUpdUaS1hig3AyNO0zobO1smlMyNzTIS5kAxi5fRH8W0juaOlklJS4xL+OSYkCOLzUqoxhBuWkNnc3fZhJQuy1o+NLdliRdptUVOqAWb1tzR2NE8MXmBaa2gLbonpjtOCeqp7OjraAG6rbWroje51aySF0tM9OX3lnTVdYKUNXd292ZNNcnnxJoE+op6y7rqiVA43WNKeE810COErM6SK9Jvi4YGDT7PyHNYidQYoQVPcpdVrQAWU9ECvKWjdVLiEoMSbjlG7MkLZipQ+YTCuYFZqsIs2BMszNS2zvbeuilFRb7WymiJAs3Uvo62rsaehrbsWl8syQwj4XZObMSacFGyQjWBrAA11aQraUJjdxOezAU1VarOdUHexPr2LrzZFVgAsPop1Lq1pffU4y0AwEUKp7VCkQfBIgUEhDjTTGfE9ue1BtaKQUQA61MYeCWsyZYAAAAASUVORK5CYII=")}
