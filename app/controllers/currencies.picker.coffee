@@ -9,7 +9,7 @@ class CurrenciesPicker extends Panel
     'currenciesPicker list'
   
   events:
-    'tap .content .item': 'click'
+    'tap article .item': 'click'
   
   constructor: (@controller, @callback) ->
     super()
