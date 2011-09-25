@@ -7,6 +7,10 @@ It was written to demonstrate the [Spine Mobile framework](http://maccman-spine.
 
 [Live demo](http://spine-mobile-currency.herokuapp.com/) (best viewed on iOS5)
 
+##Video Demo
+
+<iframe src="http://player.vimeo.com/video/29557613?title=0&amp;byline=0&amp;portrait=0" width="200" height="350" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe><p><a href="http://vimeo.com/29557613">Spine Mobile Currency Demo</a> from <a href="http://vimeo.com/user580103">Alex MacCaw</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+
 ###Installation
 
 If you haven't got them installed already, you'll need [Node](http://nodejs.org) and [npm](http://npmjs.org). Then run:
