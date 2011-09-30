@@ -4,7 +4,6 @@ CACHE:
 ./application.js
 ./application.css
 ./index.html
-./currencies.json
 
 NETWORK:
 http://currency-proxy.herokuapp.com/currencies
