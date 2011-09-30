@@ -1,11 +1,10 @@
 CACHE MANIFEST
 # v1.0.5
-NETWORK:
-*
-FALLBACK:
-http://currency-proxy.herokuapp.com/currencies ./currencies.json
 CACHE:
 ./application.js
 ./application.css
 ./index.html
 ./currencies.json
+
+NETWORK:
+http://currency-proxy.herokuapp.com/currencies
