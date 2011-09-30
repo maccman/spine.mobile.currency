@@ -8,3 +8,4 @@ CACHE:
 ./application.js
 ./application.css
 ./index.html
+./currencies.json
