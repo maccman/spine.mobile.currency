@@ -4,13 +4,16 @@ $     = jQuery
 class Currency extends Spine.Model
   @configure 'Currency', 'name', 'code', 'symbol', 'rate'
 
-  @endpoint: 'http://currency-proxy.herokuapp.com/currencies'
+  @extend Spine.Model.Local
 
+  @endpoint: 'http://currency-proxy.herokuapp.com/currencies'
+  
   @fetch ->
-    $.getJSON(@endpoint, (res) => @refresh(res, clear: true))
+    $.getJSON @endpoint, (res) => 
+      @refresh(res, clear: true)
+      @saveLocal()
   
   # Create default
-  @create(name: 'United States Dollar', code: 'USD', symbol: '$', rate: 1)
-  @default: -> @first()
+  @default: -> new @(name: 'United States Dollar', code: 'USD', symbol: '$', rate: 1)
 
 module.exports = Currency
