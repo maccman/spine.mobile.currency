@@ -8,7 +8,7 @@
     "json2ify": "~0.0.1",
     "jqueryify": "~0.0.1",
     "gfx": "~0.0.3",
-    "spine": "~0.0.9",
-    "spine.mobile": "~0.0.3"
+    "spine": "latest",
+    "spine.mobile": "latest"
   }
 }
