@@ -8,9 +8,9 @@ class Currencies extends Panel
     'currencies'
     
   events:
-    'touchstart .pad div': 'enter'
-    'touchstart .pad .clear': 'clear'
-    'touchstart .pad .point': 'point'
+    'tap .pad div': 'enter'
+    'tap .pad .clear': 'clear'
+    'tap .pad .point': 'point'
     'tap .input': 'changeFrom'
     'tap .output': 'changeTo'
     'tap .flip': 'flip'

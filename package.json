@@ -1,14 +1,14 @@
 {
   "name": "app",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "dependencies": { 
-    "ace": "~0.0.1",
-    "hem": "~0.0.6",
+    "serveup": "~0.0.2",
+    "hem": "~0.1.6",
     "es5-shimify": "~0.0.1",
     "json2ify": "~0.0.1",
     "jqueryify": "~0.0.1",
-    "gfx": "~0.0.3",
-    "spine": "latest",
-    "spine.mobile": "latest"
+    "spine": "~1.0.5",
+    "spine.mobile": "~1.0.0",
+    "gfx": "~0.0.4"
   }
 }
